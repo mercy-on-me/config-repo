@@ -1,0 +1,28 @@
+
+spring:
+  application:
+    name: order123
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springcloud?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 9001
+
+
+PRODUCT:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+    
+    
+env:
+ test
